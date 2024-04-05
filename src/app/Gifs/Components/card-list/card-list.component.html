@@ -1,21 +1,27 @@
 <div class="row">
 
     <!-- inicio de seccion de carta  -->
-    <div *ngFor="let gif of gifs" class="col-md-3 col-sm-6 " >
+    <div *ngFor="let gif of gifs" class="col-md-3 col-sm-6 pt-4" >
 
         <!-- area de tarjetas -->
         <div class=" card mb-2 bg-dark text-center">
           <!-- crear imagen -->
+          <img
+          [src]="gif.images.downsized_medium.url"
+          [alt]="gif.title"
+          class="card-img-top"
+          >
           <div class="card-body text-white">
               <p class="card-text">
-                hola mundo
+                {{gif.title}}
               </p>
           </div>
         </div>
 
 
     </div>
-    <!--fin de seccion de carta   -->
+
+
 
 
 

@@ -39,7 +39,7 @@ export class gifsService {
     this.client.get<Welcome>(`${this.serviceUrl}/search?`,{params})
     .subscribe(resp=>{
       this.giflist= resp.data
-      console.log(resp);
+
     });
 
   }
