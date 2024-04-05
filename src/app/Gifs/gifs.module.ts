@@ -1,8 +1,9 @@
+import { SharedModule } from './../shared/shared.module';
+import { CardListComponent } from './Components/card-list/card-list.component';
 import { HomePageComponent } from './Pages/home/home.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchBoxComponent } from './Components/search-box/search-box.component';
-import { CardListComponent } from './components/card-list/card-list.component';
 
 
 
@@ -13,10 +14,12 @@ import { CardListComponent } from './components/card-list/card-list.component';
     CardListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   exports:[
-    HomePageComponent
+    HomePageComponent,
+    SharedModule
   ]
 })
 export class GifsModule { }

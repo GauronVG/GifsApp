@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-center">
+<img [src]="url"
+class="card-img-top"
+[alt]=""
+(load)="onloaded()"
+[ngStyle]="{display:onload ? '':'none'}"
+/>
+
+ <img *ngIf="!onload"
+ src="assets/loader.svg" alt="nel">
+
+</div>
